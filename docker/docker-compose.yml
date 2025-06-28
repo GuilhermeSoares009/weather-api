@@ -15,8 +15,8 @@ services:
 
   weather-api-php:
     build:
-      context: ./php
-      dockerfile: Dockerfile
+      context: ../
+      dockerfile: docker/php/Dockerfile
     container_name: weather-api-php
     volumes:
       - ../:/var/www/html
