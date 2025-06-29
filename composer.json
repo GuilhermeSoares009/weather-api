@@ -1,12 +1,16 @@
 {
-    "name": "guilherme3s/weather-api",
-    "require": {
-        "guzzlehttp/guzzle": "^7.0",
-        "predis/predis": "^2.0"
-    },
+    "name": "weather-api/weather-api",
+    "description": "Weather API",
+    "type": "project",
     "autoload": {
         "psr-4": {
-            "WeatherApi\\": "src/"
+            "WheatherApi\\": "src/"
         }
+    },
+    "require": {
+        "php": ">=8.0"
+    },
+    "require-dev": {
+        
     }
 }
