@@ -1,5 +1,5 @@
 <?php
-namespace WheatherApi;
+namespace WeatherApi;
 
 class Router
 {

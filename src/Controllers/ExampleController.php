@@ -1,6 +1,6 @@
 <?php
 
-namespace WheatherApi\Controllers;
+namespace WeatherApi\Controllers;
 
 class ExampleController
 {

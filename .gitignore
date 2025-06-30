@@ -1,30 +1,15 @@
 # Dependências do Composer
 /vendor/
-/composer.lock
 
-# Ambiente Docker
-/.env
-/docker/.env
+# Ambiente
+.env
 
 # Arquivos de IDE
 /.vscode/
 /.idea/
-*.swp
-*.swo
 
-# Logs e arquivos temporários
-/storage/logs/*
+# Logs
 *.log
-*.tmp
 
-# Cache
-/var/
-/tmp/
-
-# Arquivos do sistema
+# Sistema
 .DS_Store
-Thumbs.db
-
-# Arquivos de build
-docker-compose.override.yml
-*.env.local
