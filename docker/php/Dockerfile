@@ -12,7 +12,7 @@ WORKDIR /var/www/html
 
 COPY composer.json composer.lock ./
 
-RUN composer install --no-dev --optimize-autoloader --no-interaction \
+RUN composer install --optimize-autoloader --no-interaction \
     && composer require predis/predis ^2.0 \
     && composer dump-autoload --optimize
 

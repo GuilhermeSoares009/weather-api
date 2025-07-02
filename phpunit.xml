@@ -1,0 +1,5 @@
+<phpunit bootstrap="tests/bootstrap.php">
+    <php>
+        <env name="DOTENV_FILE" value=".env.testing" />
+    </php>
+</phpunit>
