@@ -1,6 +1,6 @@
 # Weather API
 
-**API REST meteorológica desenvolvida com PHP 8.2, Docker e cache Redis**
+**API REST meteorológica desenvolvida com PHP, Docker e Redis**
 
 ## Visão Geral
 
@@ -8,11 +8,14 @@ API robusta de dados meteorológicos que integra com a Visual Crossing Weather A
 
 ## Stack Tecnológica
 
-- **Backend:** PHP 8.2
-- **Infraestrutura:** Docker, Nginx
-- **Cache:** Redis
-- **Cliente HTTP:** Guzzle
-- **Arquitetura:** Padrão MVC com separação clara de responsabilidades
+- **PHP 8.2**
+- **Docker**
+- **Nginx**
+- **Redis**
+- **Guzzle**
+- **Composer**
+- **PHPUnit**
+- **Visual Crossing Weather API**
 
 ## Endpoints da API
 
