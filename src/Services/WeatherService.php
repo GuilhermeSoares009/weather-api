@@ -18,8 +18,6 @@ class WeatherService
             'base_uri' => getenv('WEATHER_API_URL'),
             'timeout' => 10,
         ]);
-
-
     }
 
     public function getWeatherData(
@@ -34,7 +32,7 @@ class WeatherService
         if ($cachedData = $this->cache->get($cacheKey)) {
             return array_merge(
                 json_decode($cachedData, true),
-                ['fromCache' => true]
+                ['fromCache' => true] // Indica que veio do cache
             );
         }
 
@@ -71,6 +69,7 @@ class WeatherService
         ?string $endDate = null
     ) : string {
         
+        // Gera uma chave de cache única baseada na localização e datas
         return sprintf(
             'weather:%s:%s:%s',
             strtolower($location),
@@ -84,7 +83,7 @@ class WeatherService
         ?string $startDate, 
         ?string $endDate
     ): string {
-        $path = rawurlencode($location);
+        $path = rawurlencode($location); // Codifica o nome da cidade
         if($startDate) $path .= '/' . rawurlencode($startDate);
         if($endDate) $path .= '/' . rawurlencode($endDate);
         return $path;

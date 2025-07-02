@@ -1,16 +1,18 @@
 <?php
 
+// tipagem estrita => garante que os tipos de dados sejam verificados em tempo de execução
 declare(strict_types=1);
-
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use WeatherApi\Router;
 use WeatherApi\Controllers\WeatherController;
+
+// Carrega as variáveis de amiente
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__.'/../');
 $dotenv->load();
 
-
+// Define o conteúdo da resposta HTTP como Json
 header('Content-Type: application/json');
 header('Access-Control-Allow-Origin: *');
 header(('X-API-Version: 1.0'));
@@ -25,6 +27,7 @@ try {
     $method = $_SERVER['REQUEST_METHOD'] ?? 'GET';
     $path = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH);
 
+    // manda para o controller escolhido
     $router->dispatch($method, $path);
 
 } catch (Throwable $e) {
