@@ -14,15 +14,6 @@ API robusta de dados meteorológicos que integra com a Visual Crossing Weather A
 - **Cliente HTTP:** Guzzle
 - **Arquitetura:** Padrão MVC com separação clara de responsabilidades
 
-## Principais Funcionalidades
-
-- Endpoints RESTful para dados meteorológicos
-- Cache Redis com TTL configurável (12h padrão)
-- Ambiente de desenvolvimento containerizado
-- Arquitetura limpa com injeção de dependência
-- tratamento de erros e logging
-- Configuração baseada em variáveis de ambiente
-
 ## Endpoints da API
 
 ```
@@ -54,13 +45,6 @@ src/
 ├── Cache/          # Integração Redis
 └── Router.php      # Gerenciamento de rotas
 ```
-
-## Destaques Técnicos
-
-- **Estratégia de Cache:** Cache inteligente com Redis reduz chamadas à API externa e melhora tempo de resposta
-- **Arquitetura Docker:** Setup multi-container com PHP-FPM, Nginx e Redis
-- **Tratamento de Erros:** Respostas de erro abrangentes e sistema de logs
-- **Qualidade de Código:** Compliance com padrões PSR e princípios de arquitetura limpa
 
 ---
 
